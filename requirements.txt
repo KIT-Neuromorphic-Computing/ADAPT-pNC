@@ -1,0 +1,6 @@
+matplotlib==3.8.0
+numpy==2.2.1
+ray==3.0.0.dev0
+torch==2.2.1
+torchvision==0.17.1
+tsaug==0.2.1

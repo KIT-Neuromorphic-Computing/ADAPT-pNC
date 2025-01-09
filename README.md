@@ -1,39 +1,64 @@
-# Towards Temporal Information Processing -- Printed Neuromorphic Circuits with Learnable Filters
+<h1 align="center">ADAPT-pNC: Mitigating Device Variability and Sensor Noise in Printed Neuromorphic Circuits with SO Adaptive Learnable Filters</h1>
 
-This github repository is for the paper at NanoArch'23 - Towards Temporal Information Processing -- Printed Neuromorphic Circuits with Learnable Filters
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Examples](#examples)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Citation](#citation)
 
-cite as
+## Introduction
+ADAPT-pNC is a project focused on mitigating device variability and sensor noise in printed neuromorphic circuits using Self-Organizing (SO) Adaptive Learnable Filters. This repository contains the code and resources necessary to reproduce the experiments and results presented in our paper.
+
+## Installation
+To get started with ADAPT-pNC, clone the repository and install the required dependencies:
+
+```bash
+git clone /home/kit/itec/qc0876/projects/ADAPT_pNC
+cd ADAPT_pNC
+pip install -r requirements.txt
 ```
-Towards Temporal Information Processing -- Printed Neuromorphic Circuits with Learnable Filters
-Zhao, H.; Pal, P.; Hefenbrock, M.; Beigl, M.; Tahoori, M.
-Proceedings of the 18th ACM International Symposium on Nanoscale Architectures. 2023.
+
+## Usage
+To run the main experiments, use the following command:
+
+```bash
+python main.py --config configs/experiment.yaml
 ```
 
+For more detailed usage instructions, refer to the documentation in the `docs` folder.
 
+## Examples
+Here are some example commands to run different parts of the project:
 
-Usage of the code:
+```bash
+# Train the model
+python train.py --config configs/train.yaml
 
-1. Training of printed Temporal Processing Neuromorphic Circuit (pTPNC)
+# Evaluate the model
+python evaluate.py --config configs/evaluate.yaml
+```
 
-~~~
-$ sh run_LearnableFilter.sh
-~~~
+## Contributing
+We welcome contributions to the ADAPT-pNC project. Please read our [contributing guidelines](CONTRIBUTING.md) for more information on how to get involved.
 
-Alternatively, the experiments can be conducted by running command lines in `run_LearnableFilter.sh` separately, e.g.,
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-~~~
-$ sbatch exp_LearnableFilters.py --DATASET 0 --SEED 0 --task temporal --loss celoss --metric temporal_acc --projectname LearnableFilters
-$ sbatch exp_LearnableFilters.py --DATASET 0 --SEED 1 --task temporal --loss celoss --metric temporal_acc --projectname LearnableFilters
-...
-~~~
+## Citation
+If you use this code or data in your research, please cite our paper:
 
-Additionally, the baselines, e.g., the previsous printed Neuromorphic Circuits (pNCs) can be experimented by running `run_baseline_pNN.sh`.
-
-
-2.   After training printed neural networks, the trained networks are in `./LearnableFilters/model/`, the log files for training can be found in `./LearnableFilters/log/`. If there is still files in `./LearnableFilters/temp/`, you should run the corresponding command line to train the networks further. Note that, each training is limited to 48 hours, you can change this time limitation in `configuration.py`
-
-Similarly, the baselines can be found in the folder `./Baseline/`.
-
-
-
-3.   Evaluation can be done by running the `Evaluation.ipynb` in the corresponding folders for pTPNC or baselines.
+```
+@article{your_paper,
+    title={ADAPT-pNC: Mitigating Device Variability and Sensor Noise in Printed Neuromorphic Circuits with SO Adaptive Learnable Filters},
+    author={Your Name and Co-authors},
+    journal={Journal Name},
+    year={2023},
+    volume={X},
+    number={Y},
+    pages={Z-ZZ},
+    doi={DOI}
+}
+```
