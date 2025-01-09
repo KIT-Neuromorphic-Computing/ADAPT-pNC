@@ -1,0 +1,15 @@
+nan	nan
+nan	nan
+0.55833	0.15300
+0.66033	0.10441
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+0.21500	0.00500
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan
+nan	nan

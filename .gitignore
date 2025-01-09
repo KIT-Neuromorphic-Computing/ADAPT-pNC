@@ -1,0 +1,11 @@
+__pycache__/
+.DS_Store
+.ipynb_checkpoints
+*.err
+*.out
+*.log
+pNN_data*
+result_data*
+.vscode
+*.mlp
+*.sh
