@@ -113,7 +113,8 @@ ADAPT-pNC has been extensively tested on 15 benchmark time-series datasets. Here
 | PowerCons    | 0.651     | 0.797          | **0.004** |
 | SmoothS      | 0.447     | 0.653          | **0.864** |
 | Symbols      | 0.141     | 0.369          | **0.697** |
-| **Average**  | 0.501     | 0.582          | **0.725** |
+| ...          | ...       | ...            | ...       |
+| **Average**  | 0.501     | 0.582          | **0.726** |
 
 For detailed results, refer to **Table I** in our paper.
 
