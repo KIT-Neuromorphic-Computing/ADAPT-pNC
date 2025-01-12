@@ -74,9 +74,6 @@ def train_pnn_progressive_here(nn, train_loader, valid_loader, lossfunction, opt
             msg += f'hyperparameters in printed neural network for training :\nepoch : {
                 epoch:-6d} |\n'
 
-            # x_train = x_train.to(args.DEVICE)
-            # y_train = y_train.to(args.DEVICE)
-
             L_train = lossfunction(nn, x_train, y_train)
             train_acc = evaluator(nn, x_train, y_train)
             optimizer.zero_grad()
@@ -87,9 +84,6 @@ def train_pnn_progressive_here(nn, train_loader, valid_loader, lossfunction, opt
             for x_valid, y_valid in valid_loader:
                 msg += f'hyperparameters in printed neural network for validation :\nepoch : {
                     epoch:-6d} |\n'
-
-                # x_valid = x_valid.to(args.DEVICE)
-                # y_valid = y_valid.to(args.DEVICE)
 
                 L_valid = lossfunction(nn, x_valid, y_valid)
                 valid_acc = evaluator(nn, x_valid, y_valid)
@@ -135,12 +129,6 @@ def train_pnn_progressive_here(nn, train_loader, valid_loader, lossfunction, opt
             print('early stop (lr).')
             logger.info('Early stop (lr).')
             break
-
-        # if patience > args.PATIENCE:
-        #     print('Early stop (patience).')
-        #     logger.info('Early stop (patience).')
-        #     early_stop = True
-        #     break
 
         end_epoch_time = time.time()
         end_training_time = time.time()

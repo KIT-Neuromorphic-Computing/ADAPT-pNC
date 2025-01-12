@@ -58,6 +58,12 @@ For more information, you can check out the `configuration.py` file.
 
 For evaluating the trained model, you can go to the `Evaluation.ipynb` notebook and change the parameters or model addresses based on your preference.
 
+### Hyperparameter tuning via MLFlow
+
+We have obtained the best possible values for data augmentation hyperparameters. The code exists in the `mlflow_exp_LearnableFilter.py` file.
+
+
+
 ## Examples
 Here are some example commands to run different parts of the project:
 
