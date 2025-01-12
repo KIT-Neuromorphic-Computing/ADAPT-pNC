@@ -136,6 +136,8 @@ class FilterGroup(torch.nn.Module):
         betas1 = torch.linspace(0.1, 0.9, N_filters)
         betas2 = torch.linspace(0.1, 0.9, N_filters)
         for n in range(N_feature):
+            # If you want to use the normal learnable filter instead of the second order learnable filter, you can change the following line to:
+            # self.FilterGroup.append(LearnableFilter(args, [betas1[n], betas2[-(n+1)]], random_state))
             self.FilterGroup.append(
                 SecOLearnableFilter(args, [betas1[n], betas2[-(n+1)]], random_state))
 
