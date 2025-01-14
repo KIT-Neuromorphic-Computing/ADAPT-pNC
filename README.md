@@ -14,6 +14,10 @@ ADAPT-pNC is a robust framework for printed neuromorphic circuits (pNCs) that ad
 
 This repository provides the code, models, and resources to reproduce the results from our **DATE 2025** paper, where ADAPT-pNC demonstrated significant improvements over traditional methods in mitigating variability in printed electronics.
 
+<p align="center">
+    <img src="./document_images/network2.png" alt="Network Architecture">
+</p>
+
 ## Features
 - **Second-Order Learnable Filters (SO-LF):** Enhanced dynamic response for robust temporal data processing.
 - **Variation-Aware Training:** Models component and data variations to ensure reliability.
