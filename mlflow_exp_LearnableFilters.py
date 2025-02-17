@@ -250,6 +250,8 @@ def main(num_samples=10, max_num_epochs=10):
         scheduler=scheduler,)
 
     best_trial = result.get_best_trial("loss", "min", "last")
+    with open(f"best_trial_config_{args.DATASET}.txt", "w") as f:
+        f.write(f"Best trial config for {args.DATASET}: {best_trial.config}\n")
     print(f"Best trial config for {args.DATASET}: {best_trial.config}")
     print(f"Best trial final validation loss: {
           best_trial.last_result['loss']}")
