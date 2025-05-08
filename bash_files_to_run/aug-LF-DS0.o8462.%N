@@ -1,0 +1,15 @@
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc3n009
+Job ID: 8462
+Cluster: uc3
+User/Group: ka_qc0876/ka_itec
+State: TIMEOUT (exit code 0)
+Nodes: 1
+Cores per node: 20
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:20:00 core-walltime
+Job Wall-clock time: 00:01:00
+Memory Utilized: 105.64 MB
+Memory Efficiency: 0.26% of 39.06 GB (1.95 GB/core)
