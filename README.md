@@ -41,13 +41,13 @@ Train the model using:
 
 
 ```bash
+```bash
 python3 exp_LearnableFilters.py \
-    --N_train <value> \
-    --e_train <value> \
     --DATASET <value> \
     --SEED <value> \
     --task <value> \
     --loss <value> \
+    --N_train <value> \
     --opt <value> \
     --LR <value> \
     --N_feature <value> \
@@ -55,14 +55,14 @@ python3 exp_LearnableFilters.py \
     --projectname <value> \
     --DEVICE <value> \
     --PATIENCE <value> \
-    --NOISE_LEVEL <value> \
     --augment <value> \
+    --NOISE_LEVEL <value> \
     --WARP_FACTOR <value> \
     --SFR_down <value> \
     --SFR_up <value> \
     --CROP_SIZE <value>
-
 ```
+
 
 - If you want to use the normal learnable filter instead of the second order learnable filter, you can change the following line in the `FilterGroup` class in `PrintedLearnableFilter.py`:
     
@@ -72,10 +72,10 @@ python3 exp_LearnableFilters.py \
     # self.FilterGroup.append(LearnableFilter(args, [betas1[n], betas2[-(n+1)]], random_state))
     ```
 
-- If you want to consider augmentation, set `--aug` to `True` and modify the corresponding hyperparameters:
+- If you want to consider augmentation, set `--augment` to `True` and modify the corresponding hyperparameters:
 
     ```bash
-    python main.py ... --aug true --max_drift <value> --n_speed_change <value> --scale <value> --max_speed_ratio <value>
+    python exp_LearnableFilters.py ... --augment true ...[other arguments]
     ```
     
 - To change the variation setup during training, you can adjust the following parameters:
